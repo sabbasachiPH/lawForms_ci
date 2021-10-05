@@ -1,0 +1,35 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+caption {
+  font-weight: bolder;
+  color: blue;
+  font-size: 20px;
+  /* border: 1px solid blue; */
+}
+
+/*CSS FOR NAVIGATION bAR*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* width: 60px; */
+}
+li {
+  padding-bottom: 5px;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  /* background-color: #dddddd; */
+}
+li a:hover {
+  display: inline-block;
+  background-color: #dddddd;
+  padding: 5px;
+}
