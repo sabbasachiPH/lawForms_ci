@@ -25,6 +25,7 @@ if (isset($_GET['form7a_id'])) {
 
 <body>
   <a href="<?php echo base_url(); ?>index.php/welcome/table7a_insert" target="_blank"> Add New</a>
+  <h2><?php echo $this->session->flashdata('message_name'); ?></h2>
   <table>
     <caption>
       Table-7.a Demand Loan-Cash
