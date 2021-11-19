@@ -1,25 +1,3 @@
-<?php
-include('functions/function.php');
-if (isset($_GET['form7a_id'])) {
-    $form7a_id = $_GET['form7a_id'];
-    $existingData = pullForm7aData($form7a_id);
-    /*   echo "<pre>";
-    print_r($existingData);
-    echo "<hr>";
-    echo "<hr>";
-
-    include('functions/connection.php');
-    $sql = "SELECT * FROM `form7a` WHERE `form7a_id` = {$form7a_id}";
-    $result = $conn->query($sql);
-
-    while ($row = mysqli_fetch_array($result)) {
-        print_r($row);
-    }
-
-    die;*/
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,15 +5,15 @@ if (isset($_GET['form7a_id'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="form7a_viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form-7.a Demand Loan-Cash</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Update Form-7.a Demand Loan-Cash</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>style.css" />
 </head>
 
 <body>
-    <form action="functions/form7a.php" method="post">
-        <table>
+    <form action="<?php echo base_url(); ?>index.php/welcome/table7a_update/<?php echo $existingData['form7a_id']; ?>" method="post">
+        <table class="dashboard">
             <caption>
-                Table-7.a Demand Loan-Cash
+                Update Form-7.a Demand Loan-Cash
             </caption>
             <thead>
                 <tr colspan="2">
@@ -50,7 +28,7 @@ if (isset($_GET['form7a_id'])) {
                     <th>1</th>
                     <th colspan="2">Nature Of Credit</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_natureOfCredit']; ?>" name="form7a_natureOfCredit" id="natureOfCredit" />
+                        <input type="text" name="form7a_natureOfCredit" id="natureOfCredit" value="<?php echo $existingData['form7a_natureOfCredit'] ?>" />
                     </td>
                 </tr>
 
@@ -59,25 +37,25 @@ if (isset($_GET['form7a_id'])) {
                     <th rowspan="4">Notional Limit</th>
                     <th>Sanction Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_notionalLimitSanctionDate']; ?>" name="form7a_notionalLimitSanctionDate" id="notionalLimitSanctionDate" />
+                        <input type="date" name="form7a_notionalLimitSanctionDate" id="notionalLimitSanctionDate" value="<?php echo $existingData['form7a_notionalLimitSanctionDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Amount</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_notionalLimitAmount']; ?>" name="form7a_notionalLimitAmount" id="notionalLimitAmount" />
+                        <input type="text" name="form7a_notionalLimitAmount" id="notionalLimitAmount" value="<?php echo $existingData['form7a_notionalLimitAmount'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Expiry</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_notionalLimitExpiry']; ?>" name="form7a_notionalLimitExpiry" id="notionalLimitExpiry" />
+                        <input type="date" name="form7a_notionalLimitExpiry" id="notionalLimitExpiry" value="<?php echo $existingData['form7a_notionalLimitExpiry'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Sanctioning Authority</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_sanctioningAuthority']; ?>" name="form7a_sanctioningAuthority" id="sanctioningAuthority" />
+                        <input type="text" name="form7a_sanctioningAuthority" id="sanctioningAuthority" value="<?php echo $existingData['form7a_sanctioningAuthority'] ?>" />
                     </td>
                 </tr>
 
@@ -88,37 +66,37 @@ if (isset($_GET['form7a_id'])) {
                 <tr>
                     <th>LC Number</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_lcNo']; ?>" name="form7a_lcNo" id="lcNo" />
+                        <input type="text" name="form7a_lcNo" id="lcNo" value="<?php echo $existingData['form7a_lcNo'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_lcDate']; ?>" name="form7a_lcDate" id="lcDate" />
+                        <input type="date" name="form7a_lcDate" id="lcDate" value="<?php echo $existingData['form7a_lcDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Tenor</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_lcTenor']; ?>" name="form7a_lcTenor" id="lcTenor" />
+                        <input type="text" name="form7a_lcTenor" id="lcTenor" value="<?php echo $existingData['form7a_lcTenor'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Value(FC)</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_lcValueFc']; ?>" name="form7a_lcValueFc" id="lcValueFc" />
+                        <input type="text" name="form7a_lcValueFc" id="lcValueFc" value="<?php echo $existingData['form7a_lcValueFc'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Value (BDT)</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_lcValueBdt']; ?>" name="form7a_lcValueBdt" id="lcValueBdt" />
+                        <input type="text" name="form7a_lcValueBdt" id="lcValueBdt" value="<?php echo $existingData['form7a_lcValueBdt'] ?>" />
                     </td>
                 </tr>
                 <tr>
-                    <th>% Margin</th>
+                    <th>Margin( % )</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_lcMarginPercentage']; ?>" name="form7a_lcMarginPercentage" id="lcMarginPercentage" />
+                        <input type="text" name="form7a_lcMarginPercentage" id="lcMarginPercentage" value="<?php echo $existingData['form7a_lcMarginPercentage'] ?>" />
                     </td>
                 </tr>
 
@@ -127,13 +105,13 @@ if (isset($_GET['form7a_id'])) {
                     <th rowspan="2">Document Received in Branch</th>
                     <th>Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_dateDocumentReceivedInBranch']; ?>" name="form7a_dateDocumentReceivedInBranch" id="dateDocumentReceivedInBranch" />
+                        <input type="date" name="form7a_dateDocumentReceivedInBranch" id="dateDocumentReceivedInBranch" value="<?php echo $existingData['form7a_dateDocumentReceivedInBranch'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Value</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_documentValue']; ?>" name="form7a_documentValue" id="documentValue" />
+                        <input type="text" name="form7a_documentValue" id="documentValue" value="<?php echo $existingData['form7a_documentValue'] ?>" />
                     </td>
                 </tr>
 
@@ -142,25 +120,25 @@ if (isset($_GET['form7a_id'])) {
                     <th rowspan="4">Scrutiny of Documents</th>
                     <th>Lodgement Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_lodgementDate']; ?>" name="form7a_lodgementDate" id="lodgementDate" />
+                        <input type="date" name="form7a_lodgementDate" id="lodgementDate" value="<?php echo $existingData['form7a_lodgementDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Date of Discrepency Notice</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_dateDiscrepencyNotice']; ?>" name="form7a_dateDiscrepencyNotice" id="dateDiscrepencyNotice" />
+                        <input type="date" name="form7a_dateDiscrepencyNotice" id="dateDiscrepencyNotice" value="<?php echo $existingData['form7a_dateDiscrepencyNotice'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Due Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_dueDate']; ?>" name="form7a_dueDate" id="dueDate" />
+                        <input type="date" name="form7a_dueDate" id="dueDate" value="<?php echo $existingData['form7a_dueDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Acceptance/Payment Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_acceptancePaymentDate']; ?>" name="form7a_acceptancePaymentDate" id="acceptancePaymentDate" />
+                        <input type="date" name="form7a_acceptancePaymentDate" id="acceptancePaymentDate" value="<?php echo $existingData['form7a_acceptancePaymentDate'] ?>" />
                     </td>
                 </tr>
 
@@ -169,13 +147,13 @@ if (isset($_GET['form7a_id'])) {
                     <th rowspan="2">Creation of PAD</th>
                     <th>Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_padCreatoionDate']; ?>" name="form7a_padCreatoionDate" id="padCreatoionDate" />
+                        <input type="date" name="form7a_padCreatoionDate" id="padCreatoionDate" value="<?php echo $existingData['form7a_padCreatoionDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Amount</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_padAmount']; ?>" name="form7a_padAmount" id="padAmount" />
+                        <input type="text" name="form7a_padAmount" id="padAmount" value="<?php echo $existingData['form7a_padAmount'] ?>" />
                     </td>
                 </tr>
 
@@ -183,28 +161,28 @@ if (isset($_GET['form7a_id'])) {
                     <th>7</th>
                     <th colspan="2">Source of Adjustment</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_sourceOfAdjustment']; ?>" name="form7a_sourceOfAdjustment" id="sourceOfAdjustment" />
+                        <input type="text" name="form7a_sourceOfAdjustment" id="sourceOfAdjustment" value="<?php echo $existingData['form7a_sourceOfAdjustment'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>8</th>
                     <th colspan="2">Bill of Entry Matching Date</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_billEntryMatchingDate']; ?>" name="form7a_billEntryMatchingDate" id="billEntryMatchingDate" />
+                        <input type="date" name="form7a_billEntryMatchingDate" id="billEntryMatchingDate" value="<?php echo $existingData['form7a_billEntryMatchingDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>9</th>
                     <th colspan="2">Amount Since Adjusted</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_amountSinceeAdjusted']; ?>" name="form7a_amountSinceeAdjusted" id="amountSinceeAdjusted" />
+                        <input type="text" name="form7a_amountSinceeAdjusted" id="amountSinceeAdjusted" value="<?php echo $existingData['form7a_amountSinceeAdjusted'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>10</th>
                     <th colspan="2">Present outstanding</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_presentOutstanding']; ?>" name="form7a_presentOutstanding" id="presentOutstanding" />
+                        <input type="text" name="form7a_presentOutstanding" id="presentOutstanding" value="<?php echo $existingData['form7a_presentOutstanding'] ?>" />
                     </td>
                 </tr>
                 <tr>
@@ -212,42 +190,47 @@ if (isset($_GET['form7a_id'])) {
                     <th rowspan="2">Information of Forced Loan/Demand Loan</th>
                     <th>Date of Creation</th>
                     <td>
-                        <input type="date" value="<?php echo $existingData['form7a_forcedLoanCreationDate']; ?>" name="form7a_forcedLoanCreationDate" id="forcedLoanCreationDate" />
+                        <input type="date" name="form7a_forcedLoanCreationDate" id="forcedLoanCreationDate" value="<?php echo $existingData['form7a_forcedLoanCreationDate'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>Reason for Creation</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_forcedLoanCreationReason']; ?>" name="form7a_forcedLoanCreationReason" id="forcedLoanCreationReason" />
+                        <input type="text" name="form7a_forcedLoanCreationReason" id="forcedLoanCreationReason" value="<?php echo $existingData['form7a_forcedLoanCreationReason'] ?>" />
                     </td>
                 </tr>
-                <tr></tr>
                 <tr>
-                    <th>12</th>
-                    <th colspan="2">Date and Status of Classification</th>
+                    <th rowspan="2">12</th>
+                    <th rowspan="2">Date and Status of Classification</th>
+                    <th>Classification Status</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_classificationStatus']; ?>" name="form7a_classificationStatus" id="classificationStatus" />
+                        <input type="text" name="form7a_classificationStatus" id="classificationStatus" value="<?php echo $existingData['form7a_classificationStatus'] ?>" />
                     </td>
                 </tr>
+                <tr>
+                    <th>Date of Present Classification</th>
+                    <td>
+                        <input type="date" name="form7a_classificationDate" id="form7a_classificationDate" value="<?php echo $existingData['form7a_classificationDate'] ?>" />
+                    </td>
+                </tr>
+
                 <tr>
                     <th>13</th>
                     <th colspan="2">Litigable Amount</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_litigableAmount']; ?>" name="form7a_litigableAmount" id="litigableAmount" />
+                        <input type="text" name="form7a_litigableAmount" id="litigableAmount" value="<?php echo $existingData['form7a_litigableAmount'] ?>" />
                     </td>
                 </tr>
                 <tr>
                     <th>14</th>
                     <th colspan="2">Rmarks</th>
                     <td>
-                        <input type="text" value="<?php echo $existingData['form7a_remarks']; ?>" name="form7a_remarks" id="remarks" />
-                        
+                        <input type="text" name="form7a_remarks" id="remarks" value="<?php echo $existingData['form7a_remarks'] ?>" />
                     </td>
                 </tr>
-                <tr><td><input type="hidden" value="<?php echo $existingData['form7a_id']; ?>" name="form7a_id" /></td></tr>
             </tbody>
         </table>
-        <input type="submit" name="update7a" value="Update" id="remarks" />
+        <input type="submit" name="update7a" value="Update" id="update7a" />
     </form>
 
 </body>

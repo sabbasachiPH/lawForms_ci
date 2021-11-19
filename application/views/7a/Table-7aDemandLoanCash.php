@@ -3,12 +3,12 @@
 // print_r($data_7a);
 // die;
 
-if (isset($_GET['form7a_id'])) {
-  $form7a_id = $_GET['form7a_id'];
-  $sql = "delete from form7a where form7a_id = '$form7a_id'";
-  $conn->query($sql);
-  header("Location: Table-7aDemandLoanCash.php");
-}
+// if (isset($_GET['form7a_id'])) {
+// $form7a_id = $_GET['form7a_id'];
+// $sql = "delete from form7a where form7a_id = '$form7a_id'";
+// $conn->query($sql);
+// header("Location: Table-7aDemandLoanCash.php");
+// }
 
 
 ?>
@@ -25,11 +25,14 @@ if (isset($_GET['form7a_id'])) {
 
 <body>
   <a href="<?php echo base_url(); ?>index.php/welcome/table7a_insert" target="_blank"> Add New</a>
-  <h2><?php echo $this->session->flashdata('message_name'); ?></h2>
   <table>
     <caption>
       Table-7.a Demand Loan-Cash
     </caption>
+    <h2> <?php if ($this->session->flashdata('message_name')) {
+            echo $this->session->flashdata('message_name');
+          } ?>
+    </h2>
     <thead>
       <tr>
         <th rowspan="3">Action</th>
@@ -45,7 +48,7 @@ if (isset($_GET['form7a_id'])) {
         <th>9</th>
         <th>10</th>
         <th colspan="2">11</th>
-        <th>12</th>
+        <th colspan="2">12</th>
         <th>13</th>
         <th>14</th>
       </tr>
@@ -62,7 +65,7 @@ if (isset($_GET['form7a_id'])) {
         <th rowspan="2">Amount Since Adjusted</th>
         <th rowspan="2">Present outstanding</th>
         <th colspan="2">Information of Forced Loan/Demand Loan</th>
-        <th rowspan="2">Date and Status of Classification</th>
+        <th colspan="2">Date and Status of Classification</th>
         <th rowspan="2">Litigable Amount</th>
         <th rowspan="2">Rmarks</th>
       </tr>
@@ -89,6 +92,9 @@ if (isset($_GET['form7a_id'])) {
 
         <th>Date of Creation</th>
         <th>Reason for Creation</th>
+
+        <th>Present Classification Status</th>
+        <th>Date of Present Classification</th>
       </tr>
     </thead>
     <tbody>
@@ -96,8 +102,8 @@ if (isset($_GET['form7a_id'])) {
       <?php foreach ($data_7a as $row) : ?>
         <tr>
           <td>
-            <a target="_blank" href="<?php echo 'Form-7a_update.php?form7a_id=' . $row['form7a_id']; ?>">Edit</a>
-            <a target="_blank" href="<?php echo $_SERVER['SCRIPT_NAME'] . '?form7a_id=' . $row['form7a_id']; ?>" onClick="return confirm('Are You sure to Delete?')">Delete</a>
+            <a target="_blank" href="<?php echo base_url(); ?>index.php/welcome/table7a_update/<?php echo $row['form7a_id']; ?>">Edit</a>
+            <a target="_blank" href="<?php echo base_url(); ?>index.php/welcome/table7a_delete/<?php echo $row['form7a_id']; ?>" onClick="return confirm('Are You sure to Delete?')">Delete</a>
           </td>
           <td><?php echo $i++; ?></td>
           <td><?php echo $row['form7a_natureOfCredit']; ?></td>
@@ -126,6 +132,7 @@ if (isset($_GET['form7a_id'])) {
           <td><?php echo $row['form7a_forcedLoanCreationDate']; ?></td>
           <td><?php echo $row['form7a_forcedLoanCreationReason']; ?></td>
           <td><?php echo $row['form7a_classificationStatus']; ?></td>
+          <td><?php echo $row['form7a_classificationDate']; ?></td>
           <td><?php echo $row['form7a_litigableAmount']; ?></td>
           <td><?php echo $row['form7a_remarks']; ?></td>
         </tr>

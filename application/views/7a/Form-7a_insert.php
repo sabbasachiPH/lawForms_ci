@@ -94,7 +94,7 @@
           </td>
         </tr>
         <tr>
-          <th>% Margin</th>
+          <th>Margin( % )</th>
           <td>
             <input type="text" name="form7a_lcMarginPercentage" id="lcMarginPercentage" />
           </td>
@@ -199,14 +199,28 @@
             <input type="text" name="form7a_forcedLoanCreationReason" id="forcedLoanCreationReason" />
           </td>
         </tr>
-        <tr></tr>
         <tr>
+          <th rowspan="2">12</th>
+          <th rowspan="2">Date and Status of Classification</th>
+          <th>Classification Status</th>
+          <td>
+            <input type="text" name="form7a_classificationStatus" id="classificationStatus" />
+          </td>
+        </tr>
+        <tr>
+          <th>Date of Present Classification</th>
+          <td>
+            <input type="date" name="form7a_classificationDate" id="form7a_classificationDate" />
+          </td>
+        </tr>
+        <!-- <tr></tr> -->
+        <!-- <tr>
           <th>12</th>
           <th colspan="2">Date and Status of Classification</th>
           <td>
             <input type="text" name="form7a_classificationStatus" id="classificationStatus" />
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <th>13</th>
           <th colspan="2">Litigable Amount</th>
