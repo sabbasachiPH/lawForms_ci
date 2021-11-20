@@ -3,7 +3,9 @@ th,
 td {
 	border: 1px solid black;
 	border-collapse: collapse;
-	/* max-width: 100%; */
+	
+}
+td {
 	white-space: nowrap;
 	padding: 5px;
 }
@@ -22,6 +24,7 @@ caption {
 	font-weight: bolder;
 	color: blue;
 	font-size: 20px;
+	text-align: left;
 	/* border: 1px solid blue; */
 }
 

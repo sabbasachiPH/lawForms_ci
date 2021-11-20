@@ -1,17 +1,3 @@
-<?php
-// echo "<pre>";
-// print_r($data_7a);
-// die;
-
-if (isset($_GET['form7a_id'])) {
-  $form7a_id = $_GET['form7a_id'];
-  $sql = "delete from form7a where form7a_id = '$form7a_id'";
-  $conn->query($sql);
-  header("Location: Table-7aDemandLoanCash.php");
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +53,7 @@ if (isset($_GET['form7a_id'])) {
       </tr>
 
       <tr>
-        <th>Sanction Date</th>
+        <th>Sanction <br />Date</th>
         <th>Amount</th>
         <th>Expiry</th>
         <th>Sanctioning Authority</th>
