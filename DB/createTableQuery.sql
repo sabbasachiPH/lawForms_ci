@@ -66,3 +66,35 @@ CREATE TABLE IF NOT EXISTS form7b(
   `form7b_litigableAmount` decimal(15,2) DEFAULT NULL,
   `form7b_remarks` varchar(100) DEFAULT NULL
 )
+
+
+
+CREATE TABLE IF NOT EXISTS form7c(
+`form7c_id` int(11) NOT NULL,
+`form7c_natureOfCredit` varchar(100) DEFAULT NULL,
+`form7c_sanctionDate` date DEFAULT NULL,
+`form7c_limitAmount` decimal(15,2) DEFAULT NULL,
+`form7c_limitExpiry` date DEFAULT NULL,
+`form7c_limitSantionAuthority` varchar(20) DEFAULT NULL,
+`form7c_lcNumber` varchar(20) DEFAULT NULL,
+`form7c_lcDate` date DEFAULT NULL,
+`form7c_lcValueFc` decimal(15,2) DEFAULT NULL,
+`form7c_nameOfTransferingBr` varchar(20) DEFAULT NULL,
+`form7c_transferRefNo` varchar(20) DEFAULT NULL,
+`form7c_transferDate` date DEFAULT NULL,
+`form7c_exportDocumentsSubmissionDate` date DEFAULT NULL,
+`form7c_fdbpNumber` int(11) NOT NULL,
+`form7c_fdbpDate` date DEFAULT NULL,
+`form7c_fdbpDocumentsValue` decimal(15,2) DEFAULT NULL,
+`form7c_isDiscrepantFdbp` varchar(20) DEFAULT NULL,
+`form7c_fdbpValue` decimal(15,2) DEFAULT NULL,
+`form7c_fdbpMaturityDate` date DEFAULT NULL,
+`form7c_fdbpPresentingBank` varchar(20) DEFAULT NULL,
+`form7c_reasonForNonRepartition` varchar(20) DEFAULT NULL,
+`form7c_amountSinceeAdjusted` decimal(15,2) DEFAULT NULL,
+`form7c_presentOutstanding` decimal(15,2) DEFAULT NULL,
+`form7c_classificationStatus` varchar(20) DEFAULT NULL,
+`form7c_classificationDate` date DEFAULT NULL,
+`form7c_litigableAmount` decimal(15,2) DEFAULT NULL,
+`form7c_remarks` varchar(20) DEFAULT NULL
+)

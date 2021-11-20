@@ -206,7 +206,7 @@
         </tr>
       </tbody>
     </table>
-    <input type="submit" name="submit7b" value="Submit" id="form7b_remarks" />
+    <input type="submit" name="submit7b" value="Submit" />
   </form>
 </body>
 
