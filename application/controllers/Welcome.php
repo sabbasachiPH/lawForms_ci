@@ -33,7 +33,6 @@ class Welcome extends CI_Controller
 	{
 		if (isset($_POST['update7a'])) {
 			$this->Model_7a->update_7a($id);
-
 			// Set flash data 
 			$this->session->set_flashdata('message_name', 'This is my message-Data Updated Successfully');
 			// After that you need to used redirect function instead of load view such as 
@@ -152,9 +151,8 @@ class Welcome extends CI_Controller
 
 	public function table7d()
 	{
-		// $data['data_7d'] = $this->Model_7d->get_all_entries();
-		// $this->load->view('7d/Table-7dFDBP', $data);
-		$this->load->view('7d/Table-7dPackingCredit');
+		$data['data_7d'] = $this->Model_7d->get_all_entries();
+		$this->load->view('7d/Table-7dPackingCredit', $data);
 	}
 
 	public function table7d_insert()

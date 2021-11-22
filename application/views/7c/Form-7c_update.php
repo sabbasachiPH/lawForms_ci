@@ -14,7 +14,7 @@
     <form action="<?php echo base_url(); ?>index.php/welcome/table7c_update/<?php echo $existingData['form7c_id']; ?>" method="post">
         <table class="table table-bordered table-striped caption-top">
             <caption>
-                <h3>Entry Form-7.c FDBP</h3>
+                <h3>Edit Form-7.c FDBP</h3>
             </caption>
             <thead>
                 <tr colspan="2">

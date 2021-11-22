@@ -18,6 +18,8 @@
         </caption>
         <thead>
             <tr>
+                <th class="align-middle" rowspan="3">Action</th>
+                <th class="align-middle" rowspan="3">Sl. No.</th>
                 <th class="align-middle">1</th>
                 <th class="align-middle" colspan="4">2</th>
                 <th class="align-middle" colspan="4">3</th>
@@ -56,6 +58,31 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i = 1; ?>
+            <?php foreach ($data_7d as $row) : ?>
+                <tr>
+                    <td>
+                        <a class="btn btn-warning" target="_blank" href="<?php echo base_url(); ?>index.php/welcome/table7d_update/<?php echo $row['form7d_id']; ?>">Edit</a>
+                        <a class="btn btn-danger" target="_blank" href="<?php echo base_url(); ?>index.php/welcome/table7d_delete/<?php echo $row['form7d_id']; ?>" onClick="return confirm('Are You sure to Delete?')">Delete</a>
+                    </td>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo $row['form7d_natureOfCredit']; ?></td>
+                    <td><?php echo $row['form7d_lcOrEcNo']; ?></td>
+                    <td><?php echo $row['form7d_lcOrEcDate']; ?></td>
+                    <td><?php echo $row['form7d_lcOrEcValueFc']; ?></td>
+                    <td><?php echo $row['form7d_totalExportLcOrEc']; ?></td>
+                    <td><?php echo $row['form7d_pcNo']; ?></td>
+                    <td><?php echo $row['form7d_pcDate']; ?></td>
+                    <td><?php echo $row['form7d_pcValue']; ?></td>
+                    <td><?php echo $row['form7d_pcExpiry']; ?></td>
+                    <td><?php echo $row['form7d_amountSinceeAdjusted']; ?></td>
+                    <td><?php echo $row['form7d_presentOutstanding']; ?></td>
+                    <td><?php echo $row['form7d_classificationStatus']; ?></td>
+                    <td><?php echo $row['form7d_classificationDate']; ?></td>
+                    <td><?php echo $row['form7d_litigableAmount']; ?></td>
+                    <td><?php echo $row['form7d_remarks']; ?></td>
+                </tr>
+            <?php endforeach; ?>
 
         </tbody>
     </table>

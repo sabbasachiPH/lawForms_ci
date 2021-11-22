@@ -120,7 +120,6 @@
                     <td><?php echo $row['form7c_remarks']; ?></td>
                 </tr>
             <?php endforeach; ?>
-
         </tbody>
     </table>
 </body>

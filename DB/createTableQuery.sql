@@ -98,22 +98,21 @@ CREATE TABLE IF NOT EXISTS form7c(
 `form7c_litigableAmount` decimal(15,2) DEFAULT NULL,
 `form7c_remarks` varchar(20) DEFAULT NULL
 )
-
-CREATE TABLE IF NOT EXISTS form7c(
-  `form7c_id` int(11) NOT NULL AUTO_INCREMENT,
-  `form7d_natureOfCredit`
-  `form7d_lcOrEcNo`
-  `form7d_lcOrEcDate`
-  `form7d_lcOrEcValueFc`
-  `form7d_totalExportLcOrEc`
-  `form7d_pcNo`
-  `form7d_pcDate`
-  `form7d_pcValue`
-  `form7d_pcExpiry`
-  `form7d_amountSinceeAdjusted`
-  `form7d_presentOutstanding`
-  `form7d_classificationStatus`
-  `form7d_classificationDate`
-  `form7d_litigableAmount`
-  `form7d_remarks`
+CREATE TABLE IF NOT EXISTS form7d(
+    `form7d_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `form7d_natureOfCredit` VARCHAR(100) DEFAULT NULL,
+    `form7d_lcOrEcNo` INT(11) NOT NULL,
+    `form7d_lcOrEcDate` DATE DEFAULT NULL,
+    `form7d_lcOrEcValueFc` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_totalExportLcOrEc` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_pcNo` VARCHAR(20) DEFAULT NULL,
+    `form7d_pcDate` DATE DEFAULT NULL,
+    `form7d_pcValue` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_pcExpiry` DATE DEFAULT NULL,
+    `form7d_amountSinceeAdjusted` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_presentOutstanding` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_classificationStatus` VARCHAR(20) DEFAULT NULL,
+    `form7d_classificationDate` DATE DEFAULT NULL,
+    `form7d_litigableAmount` DECIMAL(15, 2) DEFAULT NULL,
+    `form7d_remarks` VARCHAR(100) DEFAULT NULL
 )
