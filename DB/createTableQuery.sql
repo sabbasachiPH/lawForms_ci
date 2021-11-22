@@ -116,3 +116,53 @@ CREATE TABLE IF NOT EXISTS form7d(
     `form7d_litigableAmount` DECIMAL(15, 2) DEFAULT NULL,
     `form7d_remarks` VARCHAR(100) DEFAULT NULL
 )
+
+CREATE TABLE IF NOT EXISTS form7e(
+`form7d_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`form7e_natureOfCredit` VARCHAR(100) DEFAULT NULL,
+`form7e_sanctionDate` DATE DEFAULT NULL,
+`form7e_sanctionAmountFc` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_sanctionAmountBdt` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_fundBuildupPercentage` INT(11) NOT NULL,
+`form7e_sanctioningAuthority` VARCHAR(100) DEFAULT NULL,
+`form7e_importLcNo` VARCHAR(50) DEFAULT NULL,
+`form7e_importLcDate` DATE DEFAULT NULL,
+`form7e_importLcValueFc` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_importLcValueBdt` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_documentRecdiveDate` DATE DEFAULT NULL,
+`form7e_documentValue` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_LtrCreationDate` DATE DEFAULT NULL,
+`form7e_LtrCreationValue` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_amountAdjusted` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_presentOutstanding` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_classificationStatus` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_classificationDate` DATE DEFAULT NULL,
+`form7e_litigableAmount` DECIMAL(15, 2) DEFAULT NULL,
+`form7e_remarks` VARCHAR(100) DEFAULT NULL
+)
+/********************************
+Array
+(
+    [form7e_natureOfCredit] => LTR
+    [form7e_sanctionDate] => 2021-11-26
+    [form7e_sanctionAmountFc] => 2
+    [form7e_sanctionAmountBdt] => 2
+    [form7e_fundBuildupPercentage] => 10
+    [form7e_sanctioningAuthority] => BR
+    [form7e_importLcNo] => 33
+    [form7e_importLcDate] => 2021-12-09
+    [form7e_importLcValueFc] => 22
+    [form7e_importLcValueBdt] => 33
+    [form7e_documentRecdiveDate] => 2021-11-25
+    [form7e_documentValue] => 456
+    [form7e_LtrCreationDate] => 2021-11-10
+    [form7e_LtrCreationValue] => 89898
+    [form7e_amountAdjusted] => 21312
+    [form7e_presentOutstanding] => 123
+    [form7e_classificationStatus] => BL
+    [form7e_classificationDate] => 2021-12-01
+    [form7e_litigableAmount] => 1122
+    [form7e_remarks] => ASDFASDF
+    [submit7e] => Submit
+)
+/****************************************************************

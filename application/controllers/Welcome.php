@@ -194,6 +194,56 @@ class Welcome extends CI_Controller
 			echo '<div class="alert alert-warning">Data Id not found</div>';
 		}
 	}
+
+	// TABLE 7E START ------------------------
+
+	public function table7e()
+	{
+		$data['data_7e'] = $this->Model_7e->get_all_entries();
+		$this->load->view('7e/Table-7eLTR', $data);
+		// $this->load->view('7e/Table-7eLTR');
+	}
+
+	public function table7e_insert()
+	{
+		if (isset($_POST['submit7e'])) {
+			$this->Model_7e->insert_entry();
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Inserted Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7e", 'refresh');
+		} else {
+			$this->load->view('7e/Form-7e_insert.php');
+		}
+	}
+
+	public function table7e_update($id)
+	{
+		if (isset($_POST['update7e'])) {
+			$this->Model_7e->update_7e($id);
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Updated Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7e", 'refresh');
+		} else {
+			$data['existingData'] = $this->Model_7e->get_data_by_id($id);
+			$this->load->view('7e/Form-7e_update.php', $data);
+		}
+	}
+
+	public function table7e_delete($id)
+	{
+		if ($id) {
+			$this->Model_7e->delete_7e($id);
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Deleted Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7e", 'refresh');
+		} else {
+			echo '<div class="alert alert-warning">Data Id not found</div>';
+		}
+	}
+
 	/*
 	public function table7d()
 	{
