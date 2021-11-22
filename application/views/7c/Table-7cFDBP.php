@@ -17,7 +17,7 @@
             Table-7.c FDBP
         </caption>
         <div class="alert alert-success" role="alert">
-            <h2> <?php if ($this->session->flashdata('message_name')) {
+            <h2> <?php if (null !== $this->session->flashdata('message_name')) {
                         echo $this->session->flashdata('message_name');
                     } ?>
             </h2>

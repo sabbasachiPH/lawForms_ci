@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS form7b(
 
 
 CREATE TABLE IF NOT EXISTS form7c(
-`form7c_id` int(11) NOT NULL,
+`form7c_id` int(11) NOT NULL AUTO_INCREMENT,
 `form7c_natureOfCredit` varchar(100) DEFAULT NULL,
 `form7c_sanctionDate` date DEFAULT NULL,
 `form7c_limitAmount` decimal(15,2) DEFAULT NULL,
@@ -97,4 +97,23 @@ CREATE TABLE IF NOT EXISTS form7c(
 `form7c_classificationDate` date DEFAULT NULL,
 `form7c_litigableAmount` decimal(15,2) DEFAULT NULL,
 `form7c_remarks` varchar(20) DEFAULT NULL
+)
+
+CREATE TABLE IF NOT EXISTS form7c(
+  `form7c_id` int(11) NOT NULL AUTO_INCREMENT,
+  `form7d_natureOfCredit`
+  `form7d_lcOrEcNo`
+  `form7d_lcOrEcDate`
+  `form7d_lcOrEcValueFc`
+  `form7d_totalExportLcOrEc`
+  `form7d_pcNo`
+  `form7d_pcDate`
+  `form7d_pcValue`
+  `form7d_pcExpiry`
+  `form7d_amountSinceeAdjusted`
+  `form7d_presentOutstanding`
+  `form7d_classificationStatus`
+  `form7d_classificationDate`
+  `form7d_litigableAmount`
+  `form7d_remarks`
 )
