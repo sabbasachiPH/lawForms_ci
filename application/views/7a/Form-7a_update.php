@@ -223,7 +223,7 @@
                 </tr>
                 <tr>
                     <th>14</th>
-                    <th colspan="2">Rmarks</th>
+                    <th colspan="2">Remarks</th>
                     <td>
                         <input type="text" name="form7a_remarks" id="remarks" value="<?php echo $existingData['form7a_remarks'] ?>" />
                     </td>

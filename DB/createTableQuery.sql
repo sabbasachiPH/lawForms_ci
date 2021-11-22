@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS form7d(
 )
 
 CREATE TABLE IF NOT EXISTS form7e(
-`form7d_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`form7e_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `form7e_natureOfCredit` VARCHAR(100) DEFAULT NULL,
 `form7e_sanctionDate` DATE DEFAULT NULL,
 `form7e_sanctionAmountFc` DECIMAL(15, 2) DEFAULT NULL,
@@ -140,7 +140,64 @@ CREATE TABLE IF NOT EXISTS form7e(
 `form7e_litigableAmount` DECIMAL(15, 2) DEFAULT NULL,
 `form7e_remarks` VARCHAR(100) DEFAULT NULL
 )
+
+CREATE TABLE IF NOT EXISTS form7f(
+`form7f_id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`form7f_natureOfCredit` VARCHAR(100) DEFAULT NULL,
+`form7f_sanctionDate` DATE DEFAULT NULL,
+`form7f_sanctionAmount` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_expiryDate` DATE DEFAULT NULL,
+`form7f_sanctioningAuthority` VARCHAR(100) DEFAULT NULL,
+`form7f_bblcNo` VARCHAR(100) DEFAULT NULL,
+`form7f_bblcDate` DATE DEFAULT NULL,
+`form7f_bblcValueFc` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_bblcValueBdt` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_issuingBank` VARCHAR(100) DEFAULT NULL,
+`form7f_isAuthenticated` VARCHAR(100) DEFAULT NULL,
+`form7f_importerName` VARCHAR(100) DEFAULT NULL,
+`form7f_doucumentSubmissionDate` DATE DEFAULT NULL,
+`form7f_doucumentValueFc` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_doucumentValueBdt` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_isDiscrepant` VARCHAR(100) DEFAULT NULL,
+`form7f_dueDate` DATE DEFAULT NULL,
+`form7f_ldbpNo` VARCHAR(100) DEFAULT NULL,
+`form7f_ldbpDate` DATE DEFAULT NULL,
+`form7f_ldbpValueBdt` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_amountAdjusted` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_presentOutstanding` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_classificationStatus` VARCHAR(50) DEFAULT NULL,
+`form7f_classificationDate` DATE DEFAULT NULL,
+`form7f_litigableAmount` DECIMAL(15, 2) DEFAULT NULL,
+`form7f_remarks` VARCHAR(100) DEFAULT NULL,
+)
 /********************************
+'form7f_natureOfCredit'
+'form7f_sanctionDate'
+'form7f_sanctionAmount'
+'form7f_expiryDate'
+'form7f_sanctioningAuthority'
+'form7f_bblcNo'
+'form7f_bblcDate'
+'form7f_bblcValueFc'
+'form7f_bblcValueBdt'
+'form7f_issuingBank'
+'form7f_isAuthenticated'
+'form7f_importerName'
+'form7f_doucumentSubmissionDate'
+'form7f_doucumentValueFc'
+'form7f_doucumentValueBdt'
+'form7f_isDiscrepant'
+'form7f_dueDate'
+'form7f_ldbpNo'
+'form7f_ldbpDate'
+'form7f_ldbpValueBdt'
+'form7f_amountAdjusted'
+'form7f_presentOutstanding'
+'form7f_classificationStatus'
+'form7f_classificationDate'
+'form7f_litigableAmount'
+'form7f_remarks'
+'submit7e'
 Array
 (
     [form7e_natureOfCredit] => LTR

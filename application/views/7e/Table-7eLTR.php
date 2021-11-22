@@ -69,9 +69,9 @@
         </thead>
         <tbody>
             <?php
-            //echo "<pre>";
+            // echo "<pre>";
             // print_r($data_7e);
-            //die;
+            // die;
             ?>
             <?php $i = 1; ?>
             <?php foreach ($data_7e as $row) : ?>

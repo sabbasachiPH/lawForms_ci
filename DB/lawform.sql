@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2021 at 06:33 PM
+-- Generation Time: Nov 22, 2021 at 09:31 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -146,6 +146,111 @@ CREATE TABLE `form7c` (
   `form7c_remarks` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form7d`
+--
+
+CREATE TABLE `form7d` (
+  `form7d_id` int(11) NOT NULL,
+  `form7d_natureOfCredit` varchar(100) DEFAULT NULL,
+  `form7d_lcOrEcNo` int(11) NOT NULL,
+  `form7d_lcOrEcDate` date DEFAULT NULL,
+  `form7d_lcOrEcValueFc` decimal(15,2) DEFAULT NULL,
+  `form7d_totalExportLcOrEc` decimal(15,2) DEFAULT NULL,
+  `form7d_pcNo` varchar(20) DEFAULT NULL,
+  `form7d_pcDate` date DEFAULT NULL,
+  `form7d_pcValue` decimal(15,2) DEFAULT NULL,
+  `form7d_pcExpiry` date DEFAULT NULL,
+  `form7d_amountSinceeAdjusted` decimal(15,2) DEFAULT NULL,
+  `form7d_presentOutstanding` decimal(15,2) DEFAULT NULL,
+  `form7d_classificationStatus` varchar(20) DEFAULT NULL,
+  `form7d_classificationDate` date DEFAULT NULL,
+  `form7d_litigableAmount` decimal(15,2) DEFAULT NULL,
+  `form7d_remarks` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `form7d`
+--
+
+INSERT INTO `form7d` (`form7d_id`, `form7d_natureOfCredit`, `form7d_lcOrEcNo`, `form7d_lcOrEcDate`, `form7d_lcOrEcValueFc`, `form7d_totalExportLcOrEc`, `form7d_pcNo`, `form7d_pcDate`, `form7d_pcValue`, `form7d_pcExpiry`, `form7d_amountSinceeAdjusted`, `form7d_presentOutstanding`, `form7d_classificationStatus`, `form7d_classificationDate`, `form7d_litigableAmount`, `form7d_remarks`) VALUES
+(2, 'packing edit ', 1, '2021-11-22', '1.00', '1.00', '1', '2021-11-23', '1.00', '2021-11-24', '1.00', '1.00', 'bl edit', '2021-12-10', '1.00', 'remarks');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form7e`
+--
+
+CREATE TABLE `form7e` (
+  `form7e_id` int(11) NOT NULL,
+  `form7e_natureOfCredit` varchar(100) DEFAULT NULL,
+  `form7e_sanctionDate` date DEFAULT NULL,
+  `form7e_sanctionAmountFc` decimal(15,2) DEFAULT NULL,
+  `form7e_sanctionAmountBdt` decimal(15,2) DEFAULT NULL,
+  `form7e_fundBuildupPercentage` int(11) NOT NULL,
+  `form7e_sanctioningAuthority` varchar(100) DEFAULT NULL,
+  `form7e_importLcNo` varchar(50) DEFAULT NULL,
+  `form7e_importLcDate` date DEFAULT NULL,
+  `form7e_importLcValueFc` decimal(15,2) DEFAULT NULL,
+  `form7e_importLcValueBdt` decimal(15,2) DEFAULT NULL,
+  `form7e_documentRecdiveDate` date DEFAULT NULL,
+  `form7e_documentValue` decimal(15,2) DEFAULT NULL,
+  `form7e_LtrCreationDate` date DEFAULT NULL,
+  `form7e_LtrCreationValue` decimal(15,2) DEFAULT NULL,
+  `form7e_amountAdjusted` decimal(15,2) DEFAULT NULL,
+  `form7e_presentOutstanding` decimal(15,2) DEFAULT NULL,
+  `form7e_classificationStatus` varchar(15) DEFAULT NULL,
+  `form7e_classificationDate` date DEFAULT NULL,
+  `form7e_litigableAmount` decimal(15,2) DEFAULT NULL,
+  `form7e_remarks` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `form7e`
+--
+
+INSERT INTO `form7e` (`form7e_id`, `form7e_natureOfCredit`, `form7e_sanctionDate`, `form7e_sanctionAmountFc`, `form7e_sanctionAmountBdt`, `form7e_fundBuildupPercentage`, `form7e_sanctioningAuthority`, `form7e_importLcNo`, `form7e_importLcDate`, `form7e_importLcValueFc`, `form7e_importLcValueBdt`, `form7e_documentRecdiveDate`, `form7e_documentValue`, `form7e_LtrCreationDate`, `form7e_LtrCreationValue`, `form7e_amountAdjusted`, `form7e_presentOutstanding`, `form7e_classificationStatus`, `form7e_classificationDate`, `form7e_litigableAmount`, `form7e_remarks`) VALUES
+(1, 'LTR Edit', '2021-11-26', '2.00', '2.00', 10, 'BR', '33', '2021-12-09', '22.00', '33.00', '2021-11-25', '456.00', '2021-11-10', '89898.00', '21312.00', '123.00', 'BL', '2021-12-01', '1122.00', 'ASDFASDF');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form7f`
+--
+
+CREATE TABLE `form7f` (
+  `form7f_id` int(11) NOT NULL,
+  `form7f_natureOfCredit` varchar(100) DEFAULT NULL,
+  `form7f_sanctionDate` date DEFAULT NULL,
+  `form7f_sanctionAmount` decimal(15,2) DEFAULT NULL,
+  `form7f_expiryDate` date DEFAULT NULL,
+  `form7f_sanctioningAuthority` varchar(100) DEFAULT NULL,
+  `form7f_bblcNo` varchar(100) DEFAULT NULL,
+  `form7f_bblcDate` date DEFAULT NULL,
+  `form7f_bblcValueFc` decimal(15,2) DEFAULT NULL,
+  `form7f_bblcValueBdt` decimal(15,2) DEFAULT NULL,
+  `form7f_issuingBank` varchar(100) DEFAULT NULL,
+  `form7f_isAuthenticated` varchar(100) DEFAULT NULL,
+  `form7f_importerName` varchar(100) DEFAULT NULL,
+  `form7f_doucumentSubmissionDate` date DEFAULT NULL,
+  `form7f_doucumentValueFc` decimal(15,2) DEFAULT NULL,
+  `form7f_doucumentValueBdt` decimal(15,2) DEFAULT NULL,
+  `form7f_isDiscrepant` varchar(100) DEFAULT NULL,
+  `form7f_dueDate` date DEFAULT NULL,
+  `form7f_ldbpNo` varchar(100) DEFAULT NULL,
+  `form7f_ldbpDate` date DEFAULT NULL,
+  `form7f_ldbpValueBdt` decimal(15,2) DEFAULT NULL,
+  `form7f_amountAdjusted` decimal(15,2) DEFAULT NULL,
+  `form7f_presentOutstanding` decimal(15,2) DEFAULT NULL,
+  `form7f_classificationStatus` varchar(50) DEFAULT NULL,
+  `form7f_classificationDate` date DEFAULT NULL,
+  `form7f_litigableAmount` decimal(15,2) DEFAULT NULL,
+  `form7f_remarks` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -169,6 +274,24 @@ ALTER TABLE `form7c`
   ADD PRIMARY KEY (`form7c_id`);
 
 --
+-- Indexes for table `form7d`
+--
+ALTER TABLE `form7d`
+  ADD PRIMARY KEY (`form7d_id`);
+
+--
+-- Indexes for table `form7e`
+--
+ALTER TABLE `form7e`
+  ADD PRIMARY KEY (`form7e_id`);
+
+--
+-- Indexes for table `form7f`
+--
+ALTER TABLE `form7f`
+  ADD PRIMARY KEY (`form7f_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -189,6 +312,24 @@ ALTER TABLE `form7b`
 --
 ALTER TABLE `form7c`
   MODIFY `form7c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `form7d`
+--
+ALTER TABLE `form7d`
+  MODIFY `form7d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `form7e`
+--
+ALTER TABLE `form7e`
+  MODIFY `form7e_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `form7f`
+--
+ALTER TABLE `form7f`
+  MODIFY `form7f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -157,7 +157,7 @@
                 </tr>
                 <tr>
                     <th>10</th>
-                    <th colspan="2">Rmarks</th>
+                    <th colspan="2">Remarks</th>
                     <td>
                         <input type="text" name="form7e_remarks" id="form7e_remarks" />
                     </td>

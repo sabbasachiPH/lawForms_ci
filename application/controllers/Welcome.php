@@ -244,6 +244,55 @@ class Welcome extends CI_Controller
 		}
 	}
 
+	// TABLE 7F START ------------------------
+
+	public function table7f()
+	{
+		$data['data_7f'] = $this->Model_7f->get_all_entries();
+		$this->load->view('7f/Table-7fLDBP.php', $data);
+	}
+
+	public function table7f_insert()
+	{
+		if (isset($_POST['submit7f'])) {
+			$this->Model_7f->insert_entry();
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Inserted Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7f", 'refresh');
+		} else {
+			$this->load->view('7f/Form-7f_insert.php');
+		}
+	}
+
+	public function table7f_update($id)
+	{
+		if (isset($_POST['update7f'])) {
+			$this->Model_7f->update_7f($id);
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Updated Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7f", 'refresh');
+		} else {
+			$data['existingData'] = $this->Model_7f->get_data_by_id($id);
+			$this->load->view('7f/Form-7f_update.php', $data);
+		}
+	}
+
+	public function table7f_delete($id)
+	{
+		if ($id) {
+			$this->Model_7f->delete_7f($id);
+			// Set flash data 
+			$this->session->set_flashdata('message_name', 'This is my message-Data Deleted Successfully');
+			// After that you need to used redirect function instead of load view such as 
+			redirect("welcome/table7f", 'refresh');
+		} else {
+			echo '<div class="alert alert-warning">Data Id not found</div>';
+		}
+	}
+
+
 	/*
 	public function table7d()
 	{

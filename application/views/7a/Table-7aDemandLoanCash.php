@@ -67,7 +67,7 @@
         <th colspan="2">Information of Forced Loan/Demand Loan</th>
         <th colspan="2">Date and Status of Classification</th>
         <th rowspan="2">Litigable Amount</th>
-        <th rowspan="2">Rmarks</th>
+        <th rowspan="2">Remarks</th>
       </tr>
 
       <tr>
